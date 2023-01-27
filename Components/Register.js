@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   altLogin: {
     margin: 30,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
   },
   altLoginItem: {
     flexDirection: "row",
