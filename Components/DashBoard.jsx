@@ -8,12 +8,16 @@ import {
   Dimensions,
   StatusBar,
 } from "react-native";
+import { PixelRatio } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 // import { useCallback } from "react";
+let BASE_HEADER_FONT_SIZE = 20;
 
+if (PixelRatio.get() <= 2) {
+  BASE_HEADER_FONT_SIZE = 24;
+}
+const { width, height } = Dimensions.get("window");
 function DashBoard({ navigation }) {
-  const { width, height } = Dimensions.get("window");
-
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -75,17 +79,17 @@ const styles = StyleSheet.create({
     fontFamily: "monospace",
   },
   headerText: {
-    fontSize: 24,
+    fontSize: BASE_HEADER_FONT_SIZE,
     fontWeight: "bold",
     color: "gray",
     textTransform: "uppercase",
   },
   button: {
-    marginBottom: 100,
+    marginBottom: height * 0.2,
     borderRadius: 10,
     paddingVertical: 10,
-    marginRight: 10,
-    width: 200,
+    // marginRight: 40,
+    width: width * 0.5,
   },
   circle: {
     position: "absolute",

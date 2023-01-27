@@ -133,9 +133,10 @@ const styles = StyleSheet.create({
     color: "#FF5A2C",
   },
   altLogin: {
-    margin: 30,
+    // margin: 30,
+    marginVertical: 30,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
   },
   altLoginItem: {
     flexDirection: "row",
